@@ -21,7 +21,6 @@ public class CanchaUpdateRequest {
     private TipoCancha tipoDeCancha;
 
     @NotNull(message = "La fecha de registro es obligatoria")
-    @FutureOrPresent(message = "La fecha debe ser hoy o una fecha futura")
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate fechaRegistro;
 
