@@ -30,11 +30,19 @@ public class SecurityConfig {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
-                    "/actuator/**",
-                    "/v3/api-docs",
-                    "/v3/api-docs/**",
-                    "/swagger-ui/**",
-                    "/swagger-ui.html"
+                    
+         "/actuator/**",
+        "/v3/api-docs",
+        "/v3/api-docs/**",
+        "/doc/api-docs",
+        "/doc/api-docs/**",
+        "/swagger-ui/**",
+        "/swagger-ui.html",
+        "/doc/swagger-ui/**",
+        "/doc/swagger-ui/index.html",
+        "/api/v1/canchas/doc/**",
+        "/api/v1/canchas/doc/swagger-ui/**"
+
                 ).permitAll()
                 .anyRequest().authenticated()
             )
